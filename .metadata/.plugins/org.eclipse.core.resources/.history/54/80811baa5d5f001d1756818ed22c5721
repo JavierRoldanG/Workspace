@@ -1,0 +1,16 @@
+package programacion;
+
+import java.util.Scanner;
+
+public class Ej8_4 {
+
+	public static void main (String[]args) {
+		
+		Scanner teclado=new Scanner (System.in);
+		String frase;
+		System.out.println("Inserte una frase:");
+		frase=teclado.nextLine();
+		frase=frase.toUpperCase();
+		
+	}
+}

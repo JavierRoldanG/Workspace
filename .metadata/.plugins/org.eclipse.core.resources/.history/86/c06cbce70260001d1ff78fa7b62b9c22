@@ -1,0 +1,29 @@
+package programacion;
+
+import java.util.Scanner;
+
+/*Escribir un programa que lea códigos de personas de 8 caracteres de modo que los cuatro
+primeros sean numéricos y contenidos entre 1990-1995 (un año), el quinto carácter sea solo (H
+ó M) sexo, el sexto un número que representa el curso 1 ó 2 y los caracteres séptimo y octavo
+pueden tener cualquier valor. Deben rechazarse los códigos que no cumplan estas condiciones.
+La finalización de entrada de códigos se produce cuando se introduce el código “00000000”.
+Al final, el programa debe sacar un informe indicando cuántos hombres y mujeres hay
+matriculados en primero y segundo y cuántos códigos correctos han sido leídos.*/
+public class Ej10_4 {
+	public static void main (String[]args) {
+		Scanner teclado= new Scanner (System.in);
+		String codigo;
+		do {
+			System.out.println("Introduce el código de una persona: ");
+			codigo= teclado.nextLine();
+			if (codigo.length () ==8 && codigo.indexOf(5)=="H" || codigo.indexOf(5)=="M") {
+				String año= codigo.substring(0, 4);
+				System.out.println("La persona nacio en el año "+ año);
+				String sexo=codigo.substring(5);
+				
+			}
+		} while(codigo!="00000000");
+		
+	}
+
+}
